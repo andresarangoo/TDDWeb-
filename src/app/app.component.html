@@ -1,0 +1,12 @@
+<main class="converter">
+  <h1 class="converter__title">
+    Convertidor de números decimales a números romanos
+  </h1>
+  <input type="number" [(ngModel)]="decimalNumber" (input)="onInputChange()" />
+  <span *ngIf="decimalNumber <= 0 || decimalNumber > 1000">
+    Solo se admite números entre 1 y 1000
+  </span>
+  <div class="converter__result">
+    <h2>El número romano es: {{ result }}</h2>
+  </div>
+</main>
